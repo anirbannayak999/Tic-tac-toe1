@@ -2,10 +2,7 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
-public class uc4 {
-
-
-
+public class uc5 {
     static char [] board = new char[10];
     static char playerSymbol;
     static char computerSymbol;
@@ -41,11 +38,32 @@ public class uc4 {
         System.out.println("****************");
     }
 
+    static void userInput(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Choose the position b/w (1 to 9): ");
+        int user = sc.nextInt();
+        if(user > 9 || user < 1){
+            System.out.println("Invalid input: ");
+            userInput();
+        }
+        else if(board[user] == ' '){
+            board[user] = playerSymbol;
+            showBoard();
+        }else{
+            System.out.println("Its not Empty");
+            userInput();
+        }
+
+    }
 
     public static void main(String[] args) {
         createBoard();
         assignSymbol();
         showBoard();
+        userInput();
     }
 
 }
+
+
+    
