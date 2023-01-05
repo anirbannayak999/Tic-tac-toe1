@@ -2,7 +2,10 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
-public class uc3 {
+public class uc4 {
+
+
+
     static char [] board = new char[10];
     static char playerSymbol;
     static char computerSymbol;
@@ -12,7 +15,7 @@ public class uc3 {
         for(int i=1; i<board.length; i++) {
             board[i] = ' ';
         }
-        System.out.println("board. is created");
+        System.out.println("board is created");
     }
 
     static void assignSymbol(){
@@ -46,5 +49,3 @@ public class uc3 {
     }
 
 }
-
-
